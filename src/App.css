@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 360px;
+    margin: auto;
+    padding: 16px;
+}
+
+@media(max-width:392px) {
+    .container {
+        width: 100%;
+    }
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.todo-counter {
+    padding: 2px;
+    border-radius: 4px;
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    background-color: dodgerblue;
+    color: #fafafa;
+    border: none;
+    min-width: 48px;
+    min-height: 24px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.btn-fw {
+    width: 100%;
+}
+
+.opacity-ef {
+    transition: .25s ease opacity;
+}
+
+.opacity-ef:hover {
+    opacity: 0.75;
+}
+
+input[type=text] {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    min-height: 24px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}

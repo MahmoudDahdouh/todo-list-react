@@ -1,0 +1,10 @@
+.section-add-todo form {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.input-add-todo {
+    width: 100%;
+}

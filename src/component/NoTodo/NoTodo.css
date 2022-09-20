@@ -1,0 +1,7 @@
+.no-todos {
+    display: flex;
+    min-height: 69px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}

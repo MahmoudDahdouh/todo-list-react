@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
-import AddTodo from './component/AddTodo'
-import NoTodos from './component/NoTodos'
-import TodoList from './component/TodoList'
+import AddTodo from './component/AddTodo/AddTodo'
+import NoTodos from './component/NoTodo/NoTodos'
+import TodoList from './component/TodoList/TodoList'
 import data from './data/todos'
+
+// css
+import './App.css'
+
 function App() {
+
   const [todos, setTodos] = useState(data)
 
   // add Todo
@@ -21,7 +26,7 @@ function App() {
     <main>
       <div className="container">
         <h1 className="title">Todo list</h1>
-        <p className='sub-title'><span>{todos.length}</span> {todos.length > 1 ? 'Todos' : 'Todo'}</p>
+        <p className='sub-title'><span className='todo-counter'>{todos.length}</span> {todos.length > 1 ? 'Todos' : 'Todo'}</p>
 
         <AddTodo addTodo={addTodo} />
         {todos.length > 0 ?
@@ -29,10 +34,9 @@ function App() {
           :
           <NoTodos />
         }
+        <button className="btn opacity-ef btn-fw" onClick={() => setTodos([])}>Clear all Todos</button>
       </div>
-
       {/* Clear all Todos */}
-      <button className="btn btn-fw" onClick={() => setTodos([])}>Clear all Todos</button>
     </main>
   )
 }
