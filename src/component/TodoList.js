@@ -1,9 +1,9 @@
 import React from 'react'
 
-function TodoList({ todos }) {
-    return <React.Fragment>
-        {todos.map((todo) =>
-            <p key={todo.id}>{todo.title}</p>
+function TodoList({ todos, deleteTodo }) {
+    return <React.Fragment >
+        {todos.map((todo, index) =>
+            <p key={todo.id}>{todo.title} <span onClick={() => deleteTodo(todo.id)}>&times;</span></p>
         )}
     </React.Fragment>
 }
