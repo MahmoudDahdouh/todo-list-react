@@ -9,7 +9,6 @@ function TodoList({ todos, deleteTodo }) {
                 <div className='btn-delete-todo opacity-ef' onClick={() => deleteTodo(todo.id)}>&times;</div>
             </div>
         )}
-        <button></button>
     </React.Fragment>
 }
 
